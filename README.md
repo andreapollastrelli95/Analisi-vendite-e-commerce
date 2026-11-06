@@ -1,27 +1,31 @@
-🛒 Analisi Vendite E-commerce
-Obiettivo: Ottimizzazione del funnel di conversione attraverso l'analisi dettagliata dei dati di comportamento utente.
-Risultato: Identificazione dei punti di attrito nel percorso d'acquisto, portando a un aumento del tasso di conversione del 23%.
-Visualizzazioni chiave: Funnel di vendita, trend del fatturato nel tempo e analisi delle transazioni medie.
+# Analisi vendite e-commerce
 
-📊 Dashboard KPI Aziendali
-Obiettivo: Creazione di una dashboard interattiva per il monitoraggio in tempo reale delle metriche chiave di business (ROI, EBIT, Customer Satisfaction).
-Risultato: Centralizzazione dei dati dipartimentali, riducendo i tempi di reporting del 40%.
-Metriche monitorate: Performance per reparto, vendite per regione e analisi dei costi vs margini.
+Esercizio di modellazione e visualizzazione in Power BI su **dati simulati**. Non deriva da un'azienda reale e non misura risultati di business.
 
-📈 Previsione Domanda Prodotti
-Obiettivo: Sviluppo di un modello predittivo per l'ottimizzazione dell'inventario basato su dati storici e stagionalità.
-Risultato: Miglioramento della precisione degli ordini, riducendo i casi di stock-out del 35%.
-Analisi inclusa: Grafici di stagionalità e trend, identificazione prodotti a rischio stock-out.
+## Cosa mostra
 
-👥 Segmentazione Clientela
-Obiettivo: Analisi cluster per identificare segmenti di clientela ad alto valore (High-Value Customers).
-Risultato: Definizione di profili utente per campagne marketing mirate, ottenendo un ROI del +45% sulle attività promozionali.
-Dettagli tecnici: Analisi del valore medio per segmento e tassi di conversione per cluster.
+- Modello dati con transazioni, dettagli d'ordine, prodotti, visite e calendario
+- Misure DAX per tasso di conversione, rimbalzo e totali
+- Report con funnel, andamento nel tempo, vendite per prodotto e card KPI
 
-💰 Ottimizzazione Pricing
-Obiettivo: Analisi dell'elasticità della domanda e confronto con il pricing dei competitor per definire strategie di prezzo dinamiche.
-Risultato: Ottimizzazione del posizionamento sul mercato con un aumento dei margini del 12%.
-Insight forniti: Variazione della domanda in base al prezzo e analisi dei margini medi per categoria.
+## Contenuto
 
-🚀 Il mio portfolio aggiornato è disponibile qui:
-https://portfolio-pollastrelliandrea.skywork.website/
+| File | Descrizione |
+|---|---|
+| `Analisi vendite ecommerce nuova.pbix` | Report Power BI |
+| `data/` | CSV simulati usati per il modello |
+| `controlli_dati.py` | Calcola i KPI e confronta ogni ordine con le sue righe di dettaglio |
+
+```bash
+pip install pandas
+python controlli_dati.py
+```
+
+## Controllo dei dati
+
+Sui dati di `data/` risultano 19 transazioni, 1.806,90 € di fatturato, 95,10 € di valore medio per ordine e un rimbalzo del 36,1%.
+
+- **Ordini incoerenti:** 7 ordini su 19 hanno un valore diverso dalla somma delle proprie righe. Per un'analisi reale andrebbero chiariti prima di calcolare il fatturato.
+- **Conversione:** le 19 transazioni su 28.660 sessioni danno lo 0,07%, perché i dati sono un piccolo campione simulato.
+
+Altri esercizi sono raccolti nel [portfolio](https://portfolio-pollastrelliandrea.skywork.website/).
